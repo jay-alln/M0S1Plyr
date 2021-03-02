@@ -22,6 +22,10 @@ body {
 	height: 100%;
 	background: rgb(51, 51, 51);
 	transition: all 0.5s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .player .main .thumbnail {
 	display: flex;
@@ -42,7 +46,7 @@ body {
 	width: 60%;
 	border-radius: 50%;
 	object-fit: cover;
-	box-shadow: 3px 8px 15px -2px #555;
+	box-shadow: 2px 4px 10px -2px #000;
 }
 .player .main .thumbnail i.fa-music.active {
 	display: none;
@@ -80,6 +84,7 @@ body {
 	font-weight: 600;
 	font-size: 18px;
 	letter-spacing: 0.1em;
+	padding: 1em;
 }
 .player .main .details {
 	text-align: center;
@@ -138,6 +143,15 @@ body {
 	background: rgba(51, 51, 51, 0.815);
 	z-index: 2;
 	transition: all 0.5s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+}
+.player-list h2 {
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	padding: 15px 5px 0 5px;
 }
 .player .player-list .toggle-list {
 	position: sticky;
@@ -148,6 +162,7 @@ body {
 	background: #555;
 	cursor: pointer;
 	transition: 0.5s ease-in-out;
+	width: 100%;
 }
 .player .player-list .toggle-list i.fa {
 	color: #fff;
@@ -168,10 +183,11 @@ body {
 }
 .player .list .item {
 	display: flex;
-	padding: 8px 0.5em;
+	align-items: center;
+	padding: .5em;
 	cursor: pointer;
 	border-radius: 10px;
-	margin: 10px 0;
+	margin: 8px 0;
 	box-shadow: 0.3px 0.7px 1px rgba(255, 255, 255, 0.205);
 	transition: 0.3s ease;
 }
@@ -197,11 +213,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 0 10px;
+	padding: 0 10px ;
 }
 .player .list .item .details h2 {
 	color: #fff;
 	font-size: 16px;
+	text-align: left;
 }
 .player .list .item .details p {
 	color: #aaa;
@@ -231,9 +248,28 @@ body {
 		width: 90%;
 		height: 100%;
 		display: grid;
-		grid-template-columns: 1fr 1.5fr;
+		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px;
 		border-radius: 10px;
+	}
+	.player .main {
+		height: 100%;
+		align-self: center;
+	}
+	.player-list {
+		padding-top: 2em;
+	}
+	.player .list .item .details {
+		padding: 0 1.5em;
+	}
+	.player .list .item .details h2 {
+		color: #fff;
+		font-size: 16px;
+		text-align: left;
+	}
+	.player .list .item .details p {
+		color: #aaa;
+		font-size: 15px;
 	}
 	.player .player-list {
 		position: relative;
@@ -245,10 +281,9 @@ body {
 	.player .player-list .toggle-list {
 		display: none;
 	}
-	.player .main .thumbnail img,
-	.player .main .thumbnail i.fa-music {
-		height: 60%;
-		width: 80%;
+	.player .main .thumbnail img {
+		height: 55%;
+		width: 270px;
 		border-radius: 5px;
 		object-fit: cover;
 	}
@@ -273,10 +308,16 @@ body {
 		grid-template-columns: repeat(2, 1fr);
 		border-radius: 10px;
 	}
-	.player .main .thumbnail img,
-	.player .main .thumbnail i.fa-music {
+	.player .main {
+		height: 60%;
+		align-self: center;
+	}
+	.player-list .item {
+		width: 80%;
+	}
+	.player .main .thumbnail img {
 		height: 80%;
-		width: 60%;
+		width: 50%;
 		border-radius: 5px;
 	}
 	.player .main .thumbnail i.fa-music {
