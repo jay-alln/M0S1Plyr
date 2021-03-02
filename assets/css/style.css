@@ -317,7 +317,7 @@ body {
 	}
 	.player .main .thumbnail img {
 		height: 80%;
-		width: 50%;
+		width: 270px;
 		border-radius: 5px;
 	}
 	.player .main .thumbnail i.fa-music {
