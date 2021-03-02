@@ -32,6 +32,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 320px;
+	width: 320px;
 }
 .player .main .thumbnail i.fa-music {
 	color: rgb(224, 224, 224);
@@ -316,8 +317,8 @@ body {
 		width: 80%;
 	}
 	.player .main .thumbnail img {
-		height: 80%;
-		width: 270px;
+		height: 60%;
+		width: 260px;
 		border-radius: 5px;
 	}
 	.player .main .thumbnail i.fa-music {
