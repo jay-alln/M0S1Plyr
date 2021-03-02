@@ -9,7 +9,7 @@ function setUpEvents() {
 	let songList = [
 		{
 			thumbnail: "gold_shadow.jpg",
-			audio: "Ever CouLd.mp3",
+			audio: "Ever Could.mp3",
 			songname: "Ever Could",
 			artistname: "Willliam Fitzsimmons",
 		},
@@ -176,7 +176,7 @@ function setUpEvents() {
 		document.querySelector(".full-time").innerHTML = durmins + ":" + dursecs;
 	});
 
-	// loadSong(currentSongIndex);
+	loadSong(currentSongIndex);
 }
 
 window.onload = function () {
