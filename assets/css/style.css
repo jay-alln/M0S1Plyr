@@ -309,6 +309,9 @@ body {
 		grid-template-columns: repeat(2, 1fr);
 		border-radius: 10px;
 	}
+	.player-list h2 {
+		padding-right: 5em;
+	}
 	.player .main {
 		height: 60%;
 		align-self: center;
@@ -317,8 +320,8 @@ body {
 		width: 80%;
 	}
 	.player .main .thumbnail img {
-		height: 60%;
-		width: 260px;
+		height: 75%;
+		width: 280px;
 		border-radius: 5px;
 	}
 	.player .main .thumbnail i.fa-music {
