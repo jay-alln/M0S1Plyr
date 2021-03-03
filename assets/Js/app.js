@@ -117,13 +117,7 @@ function setUpEvents() {
 	setInterval(() => {
 		main.seekbar.value = parseInt(main.audio.currentTime);
 
-		let audioCurrentTime = main.audio.currentTime;
-
-		let minutes = "0" + Math.floor(audioCurrentTime / 60);
-		let seconds = "0" + (Math.floor(audioCurrentTime) - minutes * 60);
-		let dur = minutes.substr(-2) + ":" + seconds.substr(-2);
-
-		document.querySelector(".current-time").innerHTML = dur;
+		
 	}, 1000);
 
 	main.prevcontrol.addEventListener("click", () => {
@@ -163,6 +157,15 @@ function setUpEvents() {
 	}
 
 	main.audio.addEventListener("timeupdate", () => {
+
+		let audioCurrentTime = main.audio.currentTime;
+
+		let minutes = "0" + Math.floor(audioCurrentTime / 60);
+		let seconds = "0" + (Math.floor(audioCurrentTime) - minutes * 60);
+		let dur = minutes.substr(-2) + ":" + seconds.substr(-2);
+
+		document.querySelector(".current-time").innerHTML = dur;
+
 		let durmins = Math.floor(main.audio.duration / 60);
 		let dursecs = Math.floor(main.audio.duration - durmins * 60);
 
